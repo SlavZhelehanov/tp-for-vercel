@@ -19,7 +19,7 @@ import EditPost from './components/post/Edit';
 export default function App() {
     return (
         <AuthProvider>
-            <div className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 w-full bg-gray-300">
+            <div className="sticky px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 w-full bg-gray-300">
                 <Navigation />
             </div>
 
