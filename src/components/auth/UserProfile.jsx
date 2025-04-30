@@ -121,8 +121,8 @@ export default function UserProfile() {
                 <div className="flex flex-col gap-6">
                     <div className="flex flex-col items-center justify-center">
                         <div className="w-full h-64 relative">
-                            <img src={COVER_IMAGE} alt="" className="w-full h-full rounded-md object-cover" />
-                            <img src={user?.avatar} width={128} height={128} alt="" className="bg-amber-50 w-32 h-32 rounded-full absolute left-0 right-0 m-auto -bottom-16 ring-4 ring-white object-cover" />
+                            <img src={COVER_IMAGE} alt="Cover" className="w-full h-full rounded-md object-cover" />
+                            <img src={user?.avatar || "/no-avatar.png"} width={128} height={128} alt="Avatar" className="bg-amber-50 w-32 h-32 rounded-full absolute left-0 right-0 m-auto -bottom-16 ring-4 ring-white object-cover" />
                         </div>
                         <h1 className="mt-20 mb-4 text-2xl font-medium">{user?.fullName}</h1>
                         <div className="flex items-center justify-center gap-12 mb-4">

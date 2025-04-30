@@ -139,7 +139,7 @@ export default function PostDetails() {
         <div className="max-w-6xl mx-auto p-8 bg-gray-50 rounded-lg shadow-lg">
             <div className="mb-8">
                 <img
-                    src={post.image}
+                    src={post.image || "/no-avatar.png"}
                     alt="Post"
                     className="w-full h-96 object-cover rounded-lg shadow-md"
                 />
@@ -147,7 +147,7 @@ export default function PostDetails() {
 
             <div className="flex items-center gap-6 mb-8">
                 <img
-                    src={post.avatar}
+                    src={post.avatar || "/no-avatar.png"}
                     alt="Creator"
                     className="w-20 h-20 rounded-full object-cover shadow-md"
                 />

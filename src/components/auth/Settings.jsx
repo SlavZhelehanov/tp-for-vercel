@@ -27,7 +27,7 @@ export default function Settings() {
                 <div className="flex flex-col items-center">
                     <div className="relative">
                         <img
-                            src={account?.avatar}
+                            src={account?.avatar || "/no-avatar.png"}
                             alt="Profile"
                             className="w-24 h-24 rounded-full object-cover border-2 border-orange-500"
                         />

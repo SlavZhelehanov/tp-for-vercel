@@ -52,7 +52,7 @@ export default function Navigation() {
                         <div className="cursor-pointer" onClick={() => setShowDialog(prev => !prev)}><FaCircleUser /></div>
                         {showDialog && (
                             <div className="absolute top-16 right-4 bg-white shadow-lg rounded-lg p-4 w-64 z-20" onClick={() => setShowDialog(prev => !prev)}>
-                                <img src={profileImage} alt="Profile" className="w-16 h-16 rounded-full mx-auto mb-4" />
+                                <img src={profileImage || "/no-avatar.png"} alt="Profile" className="w-16 h-16 rounded-full mx-auto mb-4" />
                                 <div className="flex flex-col items-start gap-2">
                                     <Link to="/auth/settings" className="flex items-center gap-2"><FaGear /><span>Account Details</span></Link>
                                     <Link to="/auth/logout" className="flex items-center gap-2"><FaArrowRightFromBracket /><span>Logout</span></Link>

@@ -3,7 +3,7 @@ export default function SingleComment({ commentData }) {
         <div className="">
             <div className="flex gap-4 justify-between mt-6">
 
-                <img src={commentData.avatar} alt="" width={40} height={40} className="w-10 h-10 rounded-full" />
+                <img src={commentData.avatar || "/no-avatar"} alt="avatar" width={40} height={40} className="w-10 h-10 rounded-full" />
 
                 <div className="flex flex-col gap-2 flex-1">
                     <span className="font-medium">{commentData.fullName}</span>

@@ -25,7 +25,7 @@ export default function Center() {
                     : users.map(user => {
                         return (
                             <Link to={`/auth/${user._id}/profile`} key={user._id} className="flex flex-col items-center gap-2 cursor-pointer">
-                                <img src={user.avatar} alt={user.username} width={80} height={80} className="w-20 h-20 rounded-full ring-2" />
+                                <img src={user.avatar || "/no-avatar.png"} alt={user.username} width={80} height={80} className="w-20 h-20 rounded-full ring-2" />
                                 <span className="font-medium">{user.fullName}</span>
                             </Link>
                         )

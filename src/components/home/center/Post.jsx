@@ -8,15 +8,15 @@ export default function Post({ post }) {
 
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                    <img src={post.avatar} alt="" width={40} height={40} className="w-10 h-10 rounded-full" />
+                    <img src={post.avatar || "/no-avatar.png"} alt="Avatar" width={40} height={40} className="w-10 h-10 rounded-full" />
                     <span className="font-medium">{post.fullName}</span>
                 </div>
-                <Link to={`/post/${post._id}/details`}><img src="/more.png" alt="" width={16} height={16} className="cursor-pointer" /></Link>
+                <Link to={`/post/${post._id}/details`}><img src="/more.png" alt="more" width={16} height={16} className="cursor-pointer" /></Link>
             </div>
 
             <div className="flex flex-col gap-4">
                 <div className="w-full min-h-96 relative">
-                    <img src={post.image} alt="" className="w-full h-full object-cover rounded-md" />
+                    <img src={post.image} alt="post image" className="w-full h-full object-cover rounded-md" />
                 </div>
                 <p>{post.content}</p>
             </div>

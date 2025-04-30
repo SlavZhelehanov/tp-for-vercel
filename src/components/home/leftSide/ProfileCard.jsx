@@ -37,8 +37,8 @@ export default function ProfileCard() {
     return (
         <div className="p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-6">
             <div className="h-20 relative">
-                <img src={userData?.cover || USER_COVER_IMAGE} alt="" className="w-full h-full object-cover rounded-md" />
-                <img src={userData?.avatar} alt="" width={48} height={48} className="bg-amber-50 w-12 h-12 object-cover rounded-full absolute left-0 right-0 m-auto -bottom-6 ring-1 ring-white z-10" />
+                <img src={userData?.cover || USER_COVER_IMAGE} alt="Cover" className="w-full h-full object-cover rounded-md" />
+                <img src={userData?.avatar || "/no-avatar.png"} alt="Avatar" width={48} height={48} className="bg-amber-50 w-12 h-12 object-cover rounded-full absolute left-0 right-0 m-auto -bottom-6 ring-1 ring-white z-10" />
             </div>
             <div className="h-20 flex flex-col gap-2 items-center">
                 <span className="font-semibold">{userData?.fullname}</span>

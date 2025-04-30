@@ -51,7 +51,7 @@ export default function Promotion({ size }) {
                         />
                     ) : (
                         <img
-                            src={content?.imageUrl}
+                            src={content?.imageUrl || "/no-avatar.png"}
                             alt="Promotion"
                             className="w-full h-full object-cover rounded-lg"
                         />
@@ -69,7 +69,7 @@ export default function Promotion({ size }) {
                         />
                     ) : (
                         <img
-                            src={content?.avatarUrl}
+                            src={content?.avatarUrl || "/no-avatar.png"}
                             alt="Avatar"
                             width={24}
                             height={24}

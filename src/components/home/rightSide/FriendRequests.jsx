@@ -106,7 +106,7 @@ export default function FriendRequests() {
                             return (
                                 <div className="flex items-center justify-between" key={user._id}>
                                     <div className="flex flex-center gap-4">
-                                        <img src={user.avatar} alt="" width={40} height={40} className="w-10 h-10 rounded-full object-cover" />
+                                        <img src={user.avatar || "/no-avatar.png"} alt="avatar" width={40} height={40} className="w-10 h-10 rounded-full object-cover" />
                                         <span className="font-semibold">{user.fullName}</span>
                                     </div>
 
