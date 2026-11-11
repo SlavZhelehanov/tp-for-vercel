@@ -45,18 +45,18 @@ export default function HomePage() {
         }
 
         return () => controller.abort();
-    }, []);
+    }, [token]);
 
     function addPostHandler(data) {
         setAllPosts(prev => [data, ...prev]);
     }
 
-    async function useAds(addContent) {
+    async function saveAds(addContent) {
         try {
             const newAds = await requester.put(`${import.meta.env.VITE_API_URL}/jsonstore/ads`, { ...addContent }, { headers: { ...user?.headers, "X-Authorization": token } });
             setAds(newAds);
         } catch (error) {
-            console.log(err.message);
+            console.log(error.message);
             alert("Error to update ads")
         }
     }    
