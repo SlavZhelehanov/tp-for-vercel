@@ -13,7 +13,7 @@ export default function AddPost({ useAllPosts }) {
 
     useEffect(() => {
         auth(token).then(setUser);
-    }, []);
+    }, [token]);
 
     async function submintAction(formData) {
         if (isSubmitting.current) return;
